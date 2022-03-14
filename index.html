@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+  <div id="klawiatura"></div> 
+  <div class="pole"></div> 
+<script>
+const klawiatura = document.getElementById("klawiatura");
+const pole = document.querySelector(".pole");
+for (let i = 0; i < 26; ++i) {
+  	let code = i + 65
+	  const letter = String.fromCharCode(code);
+  	console.log(letter);
+    const button = document.createElement("button");
+    button.innerHTML = letter;
+    klawiatura.appendChild(button);
+    button.addEventListener("click", function() {
+    pole.innerHTML += letter;
+    })
+}
+  </script>
+  
+</body>
+</html>
